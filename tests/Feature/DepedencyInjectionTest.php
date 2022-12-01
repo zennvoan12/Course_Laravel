@@ -28,7 +28,6 @@ class DepedencyInjectionTest extends TestCase
         $bar1 = $this->app->make(Bar::class);
         $bar2 = $this->app->make(Bar::class);
 
-        self::assertEquals("Foo and Bar", $bar1->bar());
         self::assertSame($foo, $bar1->foo);
         self::assertSame($bar1, $bar2);
     }
